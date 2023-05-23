@@ -6,10 +6,12 @@ services:
       dockerfile: Dockerfile
     ports:
       - 3000:3000  # Port mapping for the frontend
+    depends_on:
+      - backend
+    networks:
+      - frontend 
   db:
-    build:
-      context: ./database
-      dockerfile: Dockerfile
+    image: mysql:5.7
     environment:
       MYSQL_DATABASE: Employee_Management
       MYSQL_ROOT_PASSWORD: root
@@ -23,7 +25,16 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8888:8888  # Port mapping for the backend
+    restart: always
     depends_on:
       - db
+    environment: # Pass environment variables to the service
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/Employee_Management?useSSL=false&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root 
+      MYSQL_ROOT_PASSWORD: root
+    networks: # Networks to join (Services on the same network can communicate with each other using their name)
+      - backend
+      - frontend
 
   
