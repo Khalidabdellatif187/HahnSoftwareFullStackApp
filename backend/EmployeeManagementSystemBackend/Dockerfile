@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y maven
 WORKDIR /app
 
 # Copy the project files into the container
-COPY ./backend/EmployeeManagementSystemBackend /app
+COPY . /app
 
 # Build the application
 RUN mvn -f /app/pom.xml clean package -DskipTests
@@ -25,4 +25,3 @@ EXPOSE 8888
 
 # Set the command to run the application
 CMD ["java", "-jar", "EmployeeManagementSystemBackend-0.0.1-SNAPSHOT.jar"]
-
