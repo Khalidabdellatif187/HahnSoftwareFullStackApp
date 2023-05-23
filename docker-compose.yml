@@ -1,0 +1,25 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./frontend/employee-management-system # Path to the frontend directory
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000  # Port mapping for the frontend
+
+  backend:
+    build:
+      context: ./backend/EmployeeManagementSystem\EmployeeManagementSystemBackend\EmployeeManagementSystemBackend  # Path to the backend directory
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080  # Port mapping for the backend
+    depends_on:
+      - db
+
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: Employee_Management
+    ports:
+      - 3306:3306  # Port mapping for MySQL
