@@ -18,6 +18,10 @@ services:
       MYSQL_USER: root
     ports:
       - 3306:3306  # Port mapping for MySQL
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - backend
 
   backend:
     build:
@@ -36,5 +40,14 @@ services:
     networks: # Networks to join (Services on the same network can communicate with each other using their name)
       - backend
       - frontend
+
+# Volumes
+volumes:
+  db-data:
+
+# Networks to be created to facilitate communication between containers
+networks:
+  backend:
+  frontend:  
 
   
