@@ -9,7 +9,7 @@ services:
 
   backend:
     build:
-      context: ./backend/EmployeeManagementSystem/EmployeeManagementSystemBackend/EmployeeManagementSystemBackend  # Path to the backend directory
+      context: ./backend/EmployeeManagementSystemBackend  # Path to the backend directory
       dockerfile: Dockerfile
     ports:
       - 8888:8888  # Port mapping for the backend
