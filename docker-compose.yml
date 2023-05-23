@@ -15,7 +15,6 @@ services:
     environment:
       MYSQL_DATABASE: Employee_Management
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: root
     ports:
       - 3306:3306  # Port mapping for MySQL
     volumes:
