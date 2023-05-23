@@ -17,7 +17,9 @@ services:
       - db
 
   db:
-    image: mysql:latest
+    build:
+      context: ./database
+      dockerfile: Dockerfile
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: Employee_Management
