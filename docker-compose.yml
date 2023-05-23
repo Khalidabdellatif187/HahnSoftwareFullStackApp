@@ -6,6 +6,16 @@ services:
       dockerfile: Dockerfile
     ports:
       - 3000:3000  # Port mapping for the frontend
+  db:
+    build:
+      context: ./database
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_DATABASE: Employee_Management
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: root
+    ports:
+      - 3306:3306  # Port mapping for MySQL
 
   backend:
     build:
@@ -16,12 +26,4 @@ services:
     depends_on:
       - db
 
-  db:
-    build:
-      context: ./database
-      dockerfile: Dockerfile
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: Employee_Management
-    ports:
-      - 3306:3306  # Port mapping for MySQL
+  
