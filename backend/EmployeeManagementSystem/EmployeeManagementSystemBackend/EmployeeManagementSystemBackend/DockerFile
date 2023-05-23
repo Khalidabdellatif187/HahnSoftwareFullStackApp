@@ -1,14 +1,17 @@
-# Use the adoptopenjdk:17-jdk-hotspot base image
+# Use a base image with Java and Maven installed
 FROM adoptopenjdk:17-jdk-hotspot
 
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the JAR file generated from your Spring Boot application
-COPY target/EmployeeManagementSystemBackend.jar app.jar
+# Copy the project files into the container
+COPY . /app
 
-# Expose the port on which your Spring Boot application is running
+# Build the application
+RUN ./mvnw package -DskipTests
+
+# Expose the port on which the application will run
 EXPOSE 8888
 
-# Set the entry point command to run your Spring Boot application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Set the command to run the application
+CMD ["java", "-jar", "./target/backend.jar"]
