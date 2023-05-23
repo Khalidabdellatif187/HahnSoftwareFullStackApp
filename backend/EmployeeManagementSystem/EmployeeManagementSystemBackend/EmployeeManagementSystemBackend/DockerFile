@@ -6,10 +6,10 @@ RUN apt-get update && apt-get install -y maven
 WORKDIR /app
 
 # Copy the project files into the container
-COPY . /app
+COPY ./EmployeeManagementSystemBackend /app
 
 # Build the application
-RUN mvn clean package -DskipTests
+RUN mvn -f /app/pom.xml clean package -DskipTests
 
 # Use a new image for the runtime environment
 FROM adoptopenjdk:17-jre-hotspot
