@@ -1,0 +1,9 @@
+# Use the official MySQL image
+FROM mysql:latest
+
+# Set environment variables
+ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_DATABASE=Employee_Management
+
+# Expose the port on which MySQL is running
+EXPOSE 3306
