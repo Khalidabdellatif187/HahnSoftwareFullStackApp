@@ -1,5 +1,6 @@
 # HahnSoftwareFullStackApp
 
+<<<<<<< HEAD
 It Is a crud operations for employee management system with validation in backend and frontend to make sure that you cannot save any repeated data of an employee that is already existed in database or send any empty data
 
 # Installation
@@ -12,3 +13,5 @@ Let's use postman http://localhost:8888/api/employees to get list of all employe
 
 # Frontend URL :
 you can run react project on this url http://localhost:3000
+=======
+>>>>>>> 384b66c9b3d25da439a08203c60e1cede494b504
