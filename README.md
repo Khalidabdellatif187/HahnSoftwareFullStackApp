@@ -13,5 +13,3 @@ Let's use postman http://localhost:8888/api/employees to get list of all employe
 
 # Frontend URL :
 you can run react project on this url http://localhost:3000
-=======
->>>>>>> 384b66c9b3d25da439a08203c60e1cede494b504
