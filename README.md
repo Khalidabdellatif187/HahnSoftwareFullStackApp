@@ -13,11 +13,11 @@ After Building Container you can run this command <bold>docker-compose up</bold>
 You can make operations on a testing api tool like postman
 
 Let's use postman
-http://localhost:8888/api/employees to get list of all employees and their details You must make request <bold>GET</bold> in postman
-http://localhost:8888/api/employee/id to get one employee and its details You must make request <bold>GET</bold> in postman
-http://localhost:8888/api/employee/save to save one employee and its details in database You must make request <bold>POST</bold> in postman
-http://localhost:8888/api/employee/update/id to update one employee and its details in database You must make request <bold>PUT</bold> in postman
-http://localhost:8888/api/employee/delete/id to delete one employee and its details from database You must make request <bold>DELETE</bold> in postman
+http://localhost:8888/api/employees to get list of all employees and their details You must make request <strong>GET</strong> in postman
+http://localhost:8888/api/employee/id to get one employee and its details You must make request <strong>GET</strong> in postman
+http://localhost:8888/api/employee/save to save one employee and its details in database You must make request <strong>POST</strong> in postman
+http://localhost:8888/api/employee/update/id to update one employee and its details in database You must make request <strong>PUT</strong> in postman
+http://localhost:8888/api/employee/delete/id to delete one employee and its details from database You must make request <strong>DELETE</strong> in postman
 
 # Frontend URL :
 you can run react project on this url http://localhost:3000
