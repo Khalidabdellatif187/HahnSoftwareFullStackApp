@@ -8,4 +8,4 @@ ENV MYSQL_DATABASE=Employee_Management
 COPY employee-management.sql /docker-entrypoint-initdb.d/[
 
 # Expose the port on which MySQL is running
-EXPOSE 3307
+EXPOSE 3306
