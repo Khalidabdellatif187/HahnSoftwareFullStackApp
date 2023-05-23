@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y maven
 WORKDIR /app
 
 # Copy the project files into the container
-COPY ./backend/EmployeeManagementSystem/EmployeeManagementSystemBackend/EmployeeManagementSystemBackend /app/EmployeeManagementSystemBackend
+COPY ./EmployeeManagementSystem/EmployeeManagementSystemBackend/ /app/EmployeeManagementSystemBackend/
 
 # Build the application
 RUN mvn -f /app/EmployeeManagementSystemBackend/pom.xml clean package -DskipTests
