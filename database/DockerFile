@@ -5,5 +5,8 @@ FROM mysql:latest
 ENV MYSQL_ROOT_PASSWORD=root
 ENV MYSQL_DATABASE=Employee_Management
 
+# Copy the SQL file into the container
+COPY employee-management.sql /docker-entrypoint-initdb.d/
+
 # Expose the port on which MySQL is running
 EXPOSE 3306
