@@ -1,5 +1,5 @@
 # Use a base image with Java 17 and Maven installed
-FROM adoptopenjdk:17-jdk-hotspot as builder
+FROM adoptopenjdk:17-jdk as builder
 RUN apt-get update && apt-get install -y maven
 
 # Set the working directory inside the container
