@@ -22,4 +22,4 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: Employee_Management
     ports:
-      - 3308:3306  # Port mapping for MySQL
+      - 3306:3306  # Port mapping for MySQL
