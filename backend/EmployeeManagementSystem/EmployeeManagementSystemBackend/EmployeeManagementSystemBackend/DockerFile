@@ -12,7 +12,7 @@ COPY ./EmployeeManagementSystemBackend /app
 RUN mvn -f /app/pom.xml clean package -DskipTests
 
 # Use a new image for the runtime environment
-FROM adoptopenjdk:17-jre-hotspot
+FROM openjdk:17-jdk-slim
 
 # Set the working directory inside the container
 WORKDIR /app
