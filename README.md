@@ -10,10 +10,15 @@ you can clone project from this link https://github.com/Khalidabdellatif187/Hahn
 # Rest-Api Operations
 You can make operations on a testing api tool like postman
 Let's use postman http://localhost:8888/api/employees to get list of all employees and their details You must make request GET in postman <br/>
+
 http://localhost:8888/api/employee/id to get one employee and its details You must make request GET in postman 
+<br/>
 http://localhost:8888/api/employee/save to save one employee and its details in database You must make request POST in postman 
+</br>
 http://localhost:8888/api/employee/update/id to update one employee and its details in database You must make request PUT in postman 
+</br>
 http://localhost:8888/api/employee/delete/id to delete one employee and its details from database You must make request DELETE in postman
+</br>
 
 # Frontend URL :
 you can run react project on this url http://localhost:3000
