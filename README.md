@@ -4,7 +4,7 @@
 It Is a crud operations for employee management system with validation in backend and frontend to make sure that you cannot save any repeated data of an employee that is already existed in database or send any empty data
 
 # Installation
-you can clone project from this link https://github.com/Khalidabdellatif187/HahnSoftwareFullStackApp.git Go To your project Directory (you can use git bash) and run this docker command <strong>docker-compose</strong> up After Building Container you can run this command 
+you can clone project from this command <strong>git clone https://github.com/Khalidabdellatif187/HahnSoftwareFullStackApp.git </strong> Go To your project Directory (you can use git bash) and run this docker command <strong>docker-compose</strong> up After Building Container you can run this command 
 <strong>docker-compose up</strong>
 
 # Rest-Api Operations
